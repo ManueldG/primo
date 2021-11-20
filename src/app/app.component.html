@@ -1,3 +1,20 @@
 <h1>
   Benvenuto in {{title}}
 </h1>
+
+<h2 class="text-center">primo progetto in {{title}}</h2>
+<label>Nome</label>
+<input type="text" class="form-control" [(ngModel)]="nome">
+
+<div class="form-group" *ngIf = "nome === 'Manuel'; else error ">{{ nome }}</div>
+
+
+<div *ngFor="let persona of persone">
+  {{ persona }}
+</div>
+
+<app-second-component #error></app-second-component>
+
+<app-third-component></app-third-component>
+
+<app-forth-component></app-forth-component>
